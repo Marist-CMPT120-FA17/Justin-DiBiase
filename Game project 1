@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>
+         The Way Out
+      </title>
+	  <!-- Justin DiBiase
+			Intro to Programming
+		-->
+      <script type="text/javascript">
+	  var loc = 0;
+	  
+         function North_click() {
+			loc = 1;
+            
+            display.append(" You are now standing on the edge of a swamp, you hear something moving in the water");  
+			
+			
+		}       
+		
+		 function South_click() {
+			loc = 2;
+			display.append(" You come acorss an abandoned car, the doors are locked");
+		 }
+		 
+		 function East_click() {
+			loc = 3;
+			display.append(" You are still standing in the field with nothing in sight");
+		}
+		 
+		 function West_click() {
+			loc = 4;
+		 display.append(" You come across a small campfire with survival gear and no one in sight.");
+		}
+		 
+      </script>
+      <style>
+         .footer {color: purple; font-weight: bold;}
+      </style>
+	  
+   </head>
+   
+   <body>
+   
+      <h1> The Way Out</h1>
+	  <a href="justin.dibiase1@marist.edu">Help</a>
+	  <br>
+      <textarea id="display" rows="50" cols="100">You are standing in a dark field, with a small light to the west.
+      </textarea>
+
+      <br />
+      
+      <input type="button"
+             id = "north"
+             name="North"
+             value="North" 
+             onclick="North_click();" />
+	  <input type="button"
+             id = "South"
+             name="South"
+             value="South" 
+             onclick="South_click();" /> 
+      <input type="button"
+             id = "East"
+             name="East"
+             value="East" 
+             onclick="East_click();" />   
+	   <input type="button"
+             id = "West"
+             name="West"
+             value="West" 
+             onclick="West_click();" />	 
+      <p class="footer">
+         
+      </p>
+   </body>
+</html>
