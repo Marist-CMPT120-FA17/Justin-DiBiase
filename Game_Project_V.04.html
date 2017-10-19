@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>
+         The Way Out
+      </title>
+	  <!-- Justin DiBiase
+			Intro to Programming
+		-->
+      <script type="text/javascript">
+	  var loc = 0;
+	  var message;
+	  function fcnGo(userinp){
+		if(userinp == "n"){
+			North_click();
+			
+	  
+		}else if(userinp == "s"){
+			South_click();
+	  
+		}else if(userinp == "e"){
+			East_click();
+	  
+		}else if(userinp == "w"){
+			West_click();
+	  
+		}
+	  }
+		function dispMessage(msg){
+			display.append("\n" + msg);
+		
+		
+		}
+		function getMessage(l){
+			if(l == 0){
+				message = "You awake in an open field";
+				document.getElementById('North').disabled = false;
+				document.getElementById('South').disabled = false;
+				document.getElementById('East').disabled = false;
+				document.getElementById('West').disabled = false;
+				dispMessage(message);
+			}else if(l == 1){
+				message = "you are now standing in a swamp, you see a lighthouse on the north shore";
+				document.getElementById('North').disabled = false;
+				document.getElementById('South').disabled = true;
+				document.getElementById('East').disabled = true;
+				document.getElementById('West').disabled = true;
+				dispMessage(message);
+			}else if(l == 2){
+				message = "You have reached the side of a highway, you see lights further down the road.";
+				document.getElementById('North').disabled = true;
+				document.getElementById('South').disabled = false;
+				document.getElementById('East').disabled = true;
+				document.getElementById('West').disabled = true;
+				dispMessage(message);
+			}else if(l == 3){
+				message = "You are now standing in an empty field.";
+				document.getElementById('North').disabled = true;
+				document.getElementById('South').disabled = true;
+				document.getElementById('East').disabled = false;
+				document.getElementById('West').disabled = true;
+				dispMessage(message);
+			}else if(l == 4){
+				message = "You have come across a ransacked camp.";
+				document.getElementById('North').disabled = true;
+				document.getElementById('South').disabled = true;
+				document.getElementById('East').disabled = true;
+				document.getElementById('West').disabled = false;
+				dispMessage(message);
+			}else if(l == 5){
+				message = "You are now on a penninsula with water all around, rough seas trap you. (Game Over, You Lost!)";
+				document.getElementById('North').disabled = true;
+				document.getElementById('South').disabled = true;
+				document.getElementById('East').disabled = true;
+				document.getElementById('West').disabled = true;
+				dispMessage(message);
+			}else if(l == 6){
+				message ="You arrive at a rest stop and get on a bus going home (Game Over, You Win!!).";
+				document.getElementById('North').disabled = true;
+				document.getElementById('South').disabled = true;
+				document.getElementById('East').disabled = true;
+				document.getElementById('West').disabled = true;
+				dispMessage(message);
+			}else if(l == 7){
+				message = "You entered into a corn maize and are now lost. (Game over, You Lost!)";
+				document.getElementById('North').disabled = true;
+				document.getElementById('South').disabled = true;
+				document.getElementById('East').disabled = true;
+				document.getElementById('West').disabled = true;
+				dispMessage(message);
+			}else if(l == 8) {
+				message = "You ran through the camp and are now in a dense forest (Game over, You Lost!)";
+				document.getElementById('North').disabled = true;
+				document.getElementById('South').disabled = true;
+				document.getElementById('East').disabled = true;
+				document.getElementById('West').disabled = true;
+				dispMessage(message);
+			}
+			
+		}
+         function North_click() {
+			
+            
+            if(loc == 0){
+				loc = 1;
+				getMessage(loc);
+				
+			}else if(loc == 1){
+				loc = 5
+				getMessage(loc);
+			}else if(loc == 2){
+				loc = 0;
+				getMessage(loc);
+			}else if(loc == 3){
+				loc = 3;
+				getMessage(loc);
+			}else if(loc == 4){
+				
+				loc = 4;
+				getMessage(loc);
+			}else if(loc == 5){
+	
+				loc = 4;
+				getMessage(loc);
+			}else if(loc == 6){
+				
+				loc = 6;
+				getMessage(loc);
+			}else if(loc == 7){
+				
+				loc = 7;
+				getMessage(loc);
+			}else if(loc == 8){
+				
+				loc = 8;
+				getMessage(loc);
+				}
+			
+		}       
+		
+		 function South_click() {
+			if(loc == 0){
+				
+				loc = 2;
+				getMessage(loc);
+				
+			}else if(loc == 1){
+				
+				loc = 0;
+				getMessage(loc);
+			}else if(loc == 2){
+				
+				loc = 6;
+				getMessage(loc);
+			}else if(loc == 3){
+				
+				loc = 3;
+				getMessage(loc);
+			}else if(loc == 4){
+				
+				loc = 4;
+				getMessage(loc);
+			}else if(loc == 5){
+				
+				loc = 5;
+				getMessage(loc);
+			}else if(loc == 6){
+				
+				loc = 6;
+				getMessage(loc);
+			
+			}else if(loc == 7){
+				
+				loc = 7;
+				getMessage(loc);
+			}else if(loc == 8){
+				
+				loc = 8;
+				getMessage(loc);
+				}
+		} 
+		 function East_click() {
+			if(loc == 0){
+				
+				loc = 3;
+				getMessage(loc);
+			}else if(loc == 1){
+				
+				loc = 1;
+				getMessage(loc);
+			}else if(loc == 2){
+				
+				loc = 2;
+				getMessage(loc);
+			}else if(loc == 3){
+			
+				
+				loc = 7;
+				getMessage(loc);
+			}else if(loc == 4){
+				
+				loc = 0;
+				getMessage(loc);
+			}else if(loc == 5){
+				
+				loc = 5;
+				getMessage(loc);
+			}else if(loc == 6){
+				
+				loc = 6;
+				getMessage(loc);
+			}else if(loc == 7){
+				
+				loc = 7;
+				getMessage(loc);
+			}else if(loc == 8){
+				
+				loc = 8;
+				getMessage(loc);
+			}
+		}
+		 
+		 function West_click() {
+			if(loc == 0){
+				
+				loc = 4;
+				getMessage(loc);
+			}else if(loc == 1){
+				
+				loc = 1;
+				getMessage(loc);
+			}else if(loc == 2){
+				
+				loc = 2;
+				getMessage(loc);
+			}else if(loc == 3){
+				
+				loc = 0;
+				getMessage(loc);
+			}else if(loc == 4){
+				
+				
+				loc = 8;	
+				getMessage(loc);
+			
+			}else if(loc == 5){
+				
+				loc = 5;
+				getMessage(loc);
+			}else if(loc == 6){
+				
+				loc = 6;	
+				getMessage(loc);
+				
+			}else if(loc == 7){
+				
+				loc = 7;
+				getMessage(loc);
+			}else if(loc == 8){
+				
+				loc = 8;
+				getMessage(loc);
+			
+			}
+		}
+		 
+      </script>
+      <style>
+         .footer {color: purple; font-weight: bold;}
+      </style>
+	  
+   </head>
+   
+   <body>
+   
+      <h1> The Way Out</h1>
+			
+	  <a href="justin.dibiase1@marist.edu">Help</a>
+	  <br>
+      <textarea id="display" rows="50" cols="100">You are standing in a dark field, with a small light to the west.
+      </textarea>
+
+      <br />
+	  <input type = "text"
+			id = "textcommand"
+			name = "textcommand" />
+
+      <input type = "button"
+			 id = "Go"
+			 name = "Go"
+			 value = "Go"
+			 onclick = "fcnGo(document.getElementById('textcommand').value);" />
+      <input type="button"
+             id = "North"
+             name="North"
+             value="North" 
+             onclick="North_click();" />
+	  <input type="button"
+             id = "South"
+             name="South"
+             value="South" 
+             onclick="South_click();" /> 
+      <input type="button"
+             id = "East"
+             name="East"
+             value="East" 
+             onclick="East_click();" />   
+	   <input type="button"
+             id = "West"
+             name="West"
+             value="West" 
+             onclick="West_click();" />	 
+      <p class="footer">
+         
+      </p>
+	  Instructions: Enter "n" for north, "s" for south, "e" for east, and "w" for west.  You may also use the buttons instead.  
+   </body>
+</html>
